@@ -6,7 +6,7 @@ def changeCase(str):
     caseStr=list(map(lambda char: char.upper() if char.islower() else char.lower(),str))
     return ''.join(caseStr) 
 string="taha Hussain"
-# print(changeCase(string))
+print(changeCase(string))
 
 
 # Exercise Python input/output
@@ -15,13 +15,13 @@ def swap(num1,num2,num3,num4):
     num1,num2,num3,num4=num4,num3,num2,num1
     return num1,num2,num3,num4
 a,b,c,d=2,56,78,9
-# print(f'Before Swaping\na:{a}, b:{b}, c:{c}, d:{d}')
+print(f'Before Swaping\na:{a}, b:{b}, c:{c}, d:{d}')
 a,b,c,d=swap(a,b,c,d)
-# print(f'After Swaping\na:{a}, b:{b}, c:{c}, d:{d}')
+print(f'After Swaping\na:{a}, b:{b}, c:{c}, d:{d}')
 
 # (ii)
-# print("To Convert Celcius to Farhenheit Press 1")
-# print("To Convert Farhenheit to Celcius Press 2")
+print("To Convert Celcius to Farhenheit Press 1")
+print("To Convert Farhenheit to Celcius Press 2")
 
 # will check if proper convertor is selected
 def tempChecker():
@@ -31,7 +31,7 @@ def tempChecker():
     print("Press 1 or 2")
     return tempChecker()
 
-# temp=tempChecker()
+temp=tempChecker()
 
 # will check if proper value is selected
 def valueChecker(degree):
@@ -50,7 +50,7 @@ def valueChecker(degree):
             print("Between 32 to 212")
             return valueChecker(degree)
 
-# tempValue=valueChecker(temp)
+tempValue=valueChecker(temp)
 
 # convertor function
 def tempConvertor(temperature,value):
@@ -62,7 +62,7 @@ def tempConvertor(temperature,value):
         newTemp=f'{calculated} C'
     return newTemp
 
-# print(tempConvertor(temp,tempValue))
+print(tempConvertor(temp,tempValue))
 
 
 # Exercise Lists
@@ -74,7 +74,7 @@ def isPalindrome(str):
     onlyAlpha.reverse()
     return alphaString==''.join(onlyAlpha)
     
-# print(isPalindrome("Was it a car or a cat I saw?"))
+print(isPalindrome("Was it a car or a cat I saw?"))
 # (ii)
 def firstLast(arr):
     count=0
@@ -86,7 +86,7 @@ def firstLast(arr):
     return count
 exampleCase=['abc', 'xyz', 'aba', '1221']
 # print(list(exampleCase[0]))
-# print(firstLast(exampleCase))
+print(firstLast(exampleCase))
 # Dictionary
 # (i) get users according to age using get method
 def getUser(useDictionary,age):
@@ -94,7 +94,7 @@ def getUser(useDictionary,age):
     for i in useDictionary:
         if(i.get("age")>=age):
             user.append(i);
-    return user if len(user)>1 else "No user"
+    return user if len(user)>=1 else "No user"
 
 usersData=[{"name":"Taha","age":19},{"name":"Haris","age":14},
            {"name":"Fouz","age":18},{"name":"Hussain","age":9}]
@@ -126,18 +126,18 @@ def lowerCase(arr):
     return newarr;
 
 exampleString=["TAHA","HUSSAIN","Saleem","ALI","HASAN","FAROOQ"]
-# print(lowerCase(exampleString))
+print(lowerCase(exampleString))
 
 # (ii)
 def removeElements(arr):
     del arr[0]
     del arr[3]
-    del arr[3:]
+    del arr[len(arr)-2:]
     return arr
     # return arr[1:4]
 
-# print(removeElements(['Red', 'Green', 'White', 'Black',
-#                       'Pink', 'Yellow','Teapink']))
+print(removeElements(['Red', 'Green', 'White', 'Black',
+                      'Pink', 'Yellow','Teapink']))
 
 # caesarcipher is an algorithm which moves each
 # alphabet in a string to jump times forward
